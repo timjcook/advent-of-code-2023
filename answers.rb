@@ -3,6 +3,7 @@
 require_relative 'input_reader'
 require_relative 'solutions/trebuchet'
 require_relative 'solutions/bag_of_cubes'
+require_relative 'solutions/engine_schematics'
 
 def heading(day:)
   puts "===========================================\n"
@@ -28,6 +29,17 @@ heading day: 2
 reader = InputReader.new(filename: 'inputs/day-2.txt')
 score_1 = BagOfCubes.calculate(input: reader.lines, part: 1)
 score_2 = BagOfCubes.calculate(input: reader.lines, part: 2)
+
+puts "Part 1: #{score_1}\n\n"
+puts "Part 2: #{score_2}\n\n"
+
+## Day 3
+
+heading day: 3
+
+reader = InputReader.new(filename: 'inputs/day-3.txt')
+score_1 = EngineSchematics.calculate(input: reader.lines, part: 1)
+score_2 = EngineSchematics.calculate(input: reader.lines, part: 2)
 
 puts "Part 1: #{score_1}\n\n"
 puts "Part 2: #{score_2}\n\n"

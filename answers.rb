@@ -6,6 +6,7 @@ require_relative 'solutions/bag_of_cubes'
 require_relative 'solutions/engine_schematics'
 require_relative 'solutions/scratchcards'
 require_relative 'solutions/seeds'
+require_relative 'solutions/boat_racing'
 
 def heading(day:)
   puts "===========================================\n"
@@ -64,6 +65,17 @@ heading day: 5
 reader = InputReader.new(filename: 'inputs/day-5.txt')
 score_1 = Seeds.calculate(input: reader.lines, part: 1)
 score_2 = Seeds.calculate(input: reader.lines, part: 2)
+
+puts "Part 1: #{score_1}\n\n"
+puts "Part 2: #{score_2}\n\n"
+
+## Day 6
+
+heading day: 6
+
+reader = InputReader.new(filename: 'inputs/day-6.txt')
+score_1 = BoatRacing.calculate(input: reader.lines, part: 1)
+score_2 = BoatRacing.calculate(input: reader.lines, part: 2)
 
 puts "Part 1: #{score_1}\n\n"
 puts "Part 2: #{score_2}\n\n"

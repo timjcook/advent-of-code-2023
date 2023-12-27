@@ -8,6 +8,7 @@ require_relative 'solutions/scratchcards'
 require_relative 'solutions/seeds'
 require_relative 'solutions/boat_racing'
 require_relative 'solutions/camel_cards'
+require_relative 'solutions/map_plot'
 
 def heading(day:)
   puts "===========================================\n"
@@ -88,6 +89,17 @@ heading day: 7
 reader = InputReader.new(filename: 'inputs/day-7.txt')
 score_1 = CamelCards.calculate(input: reader.lines, part: 1)
 score_2 = CamelCards.calculate(input: reader.lines, part: 2)
+
+puts "Part 1: #{score_1}\n\n"
+puts "Part 2: #{score_2}\n\n"
+
+## Day 8
+
+heading day: 8
+
+reader = InputReader.new(filename: 'inputs/day-8.txt')
+score_1 = MapPlot.calculate(input: reader.lines, part: 1)
+score_2 = MapPlot.calculate(input: reader.lines, part: 2)
 
 puts "Part 1: #{score_1}\n\n"
 puts "Part 2: #{score_2}\n\n"

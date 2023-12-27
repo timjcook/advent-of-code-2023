@@ -9,6 +9,7 @@ require_relative 'solutions/seeds'
 require_relative 'solutions/boat_racing'
 require_relative 'solutions/camel_cards'
 require_relative 'solutions/map_plot'
+require_relative 'solutions/oasis'
 
 def heading(day:)
   puts "===========================================\n"
@@ -100,6 +101,17 @@ heading day: 8
 reader = InputReader.new(filename: 'inputs/day-8.txt')
 score_1 = MapPlot.calculate(input: reader.lines, part: 1)
 score_2 = MapPlot.calculate(input: reader.lines, part: 2)
+
+puts "Part 1: #{score_1}\n\n"
+puts "Part 2: #{score_2}\n\n"
+
+## Day 9
+
+heading day: 9
+
+reader = InputReader.new(filename: 'inputs/day-9.txt')
+score_1 = Oasis.calculate(input: reader.lines, part: 1)
+score_2 = Oasis.calculate(input: reader.lines, part: 2)
 
 puts "Part 1: #{score_1}\n\n"
 puts "Part 2: #{score_2}\n\n"
